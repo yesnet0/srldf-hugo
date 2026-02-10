@@ -1,0 +1,741 @@
+/* ============================================
+   SRLDF Hugo Theme - Main Stylesheet
+   ============================================ */
+
+/* CSS Variables */
+:root {
+  --black: #000;
+  --dark-slate-blue: #2e475d;
+  --tomato: #ff5c35;
+  --light-grey: #f4f4f4;
+  --white: #fff;
+  --bg-dark: #0f1419;
+  --bg-section: #fff;
+  --text-primary: #333;
+  --text-white: #fff;
+  --accent: #F25300;
+  --border-accent: #ff5c35;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.56;
+  color: var(--text-primary);
+  background-color: var(--bg-section);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-small {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  border-bottom: 3px solid var(--border-accent);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  min-height: 5.4rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 3rem;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--tomato);
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+  background-color: var(--white);
+  background-image: url('../images/bg-graphic.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem 2rem;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-content {
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--dark-slate-blue);
+}
+
+.hero-divider {
+  margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Sections
+   ============================================ */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--dark-slate-blue);
+}
+
+.section-heading.centered {
+  text-align: center;
+}
+
+/* ============================================
+   Tabs (What We Do)
+   ============================================ */
+.section-process {
+  background-color: var(--white);
+}
+
+.section-process .section-heading {
+  text-align: center;
+}
+
+.tabs {
+  margin-top: 1rem;
+}
+
+.tabs-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.75rem 1rem;
+  margin-bottom: -1px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-slate-blue);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--tomato);
+}
+
+.tab-btn.active {
+  color: var(--dark-slate-blue);
+  border-bottom-color: var(--tomato);
+}
+
+.tabs-content {
+  min-height: 300px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tab-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.tab-text.centered {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emphasis {
+  font-weight: 700;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.criteria-list {
+  margin-top: 1rem;
+}
+
+.criteria-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.resources-list {
+  list-style: lower-roman;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.resources-list li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.resource-link {
+  color: var(--tomato);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.resource-link:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   Team Section
+   ============================================ */
+.section-team {
+  background-color: var(--white);
+  padding: 5rem 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-slate-blue);
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-slate-blue);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--tomato);
+  padding-bottom: 2px;
+}
+
+.team-affiliation {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* ============================================
+   FAQ Section
+   ============================================ */
+.section-faq {
+  background-color: var(--white);
+  background-image: url('../images/bg-cubes.svg');
+  background-position: bottom 0 left -30px;
+  background-repeat: no-repeat;
+  background-size: 250px auto;
+  padding: 5rem 2rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+.faq-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid #e8c4b8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--tomato);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.faq-question:hover .faq-title {
+  color: var(--tomato);
+}
+
+.faq-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dark-slate-blue);
+  transition: color 0.2s ease;
+  padding-right: 1rem;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+}
+
+.faq-answer-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.faq-answer-content ul {
+  margin-top: 0.5rem;
+}
+
+.faq-answer-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+.contact-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.contact-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--dark-slate-blue);
+}
+
+.contact-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.text-link {
+  color: var(--tomato);
+  text-decoration: underline;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.text-link:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background-color: var(--white);
+  border-top: 2px solid var(--border-accent);
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  margin-bottom: 2rem;
+}
+
+.footer-logo-image {
+  height: 2.5rem;
+  width: auto;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.footer-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.footer-security {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.footer-link {
+  color: var(--tomato);
+  text-decoration: underline;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.footer-copyright {
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
+}
+
+/* ============================================
+   Page Content (Privacy Policy)
+   ============================================ */
+.page-content {
+  padding: 6rem 2rem;
+  background-color: var(--white);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.page-body {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.page-body h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-body h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-body p {
+  margin-bottom: 1rem;
+}
+
+.page-body a {
+  color: var(--tomato);
+  text-decoration: underline;
+}
+
+.page-body em {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media screen and (max-width: 991px) {
+  .navbar-container {
+    min-height: 4.75rem;
+  }
+
+  .hero {
+    padding: 6rem 2rem;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    border-bottom: 3px solid var(--border-accent);
+    gap: 1rem;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+    min-height: 340px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .tabs-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navbar-container {
+    min-height: 4rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .logo-image {
+    height: 2.25rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-copyright {
+    border-right: none;
+    padding-right: 0;
+  }
+}

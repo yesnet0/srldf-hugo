@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="26px" viewBox="0 0 176 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="assets" transform="translate(-633.000000, -478.000000)">
+            <g id="Group" transform="translate(634.979167, 479.000000)">
+                <g id="6646056_essentials_protection_security_shield_ui_icon-copy" transform="translate(74.020833, 0.000000)"></g>
+                <line x1="62" y1="11" x2="0" y2="11" id="Line" stroke="#F25300" stroke-width="2" stroke-linecap="square"></line>
+                <path d="M97.9208333,1.4 C94.5208333,0.5 90.4208333,0 86.0208333,0 C81.6208333,0 77.5208333,0.5 74.1208333,1.4 C74.0208333,2 74.0208333,2.7 74.0208333,3.4 C74.0208333,8.4 75.6208333,13.1 78.4208333,17 C80.4208333,19.8 83.0208333,22.2 86.0208333,24 C89.0208333,22.2 91.6208333,19.8 93.6208333,17 C96.4208333,13.1 98.0208333,8.4 98.0208333,3.4 C98.0208333,2.7 98.0208333,2 97.9208333,1.4 Z" id="Path" stroke="#F25300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="172.166667" y1="11" x2="110.166667" y2="11" id="Line" stroke="#F25300" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>
