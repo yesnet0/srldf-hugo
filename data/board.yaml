@@ -1,0 +1,19 @@
+- name: "Jim Dempsey"
+  role: "Board Member"
+  affiliation: "UC Berkeley and Stanford"
+  image: "/images/headshot-jim.jpg"
+
+- name: "Kurt Opsahl"
+  role: "Board Member"
+  affiliation: "Filecoin Foundation"
+  image: "/images/headshot-kurt.jpg"
+
+- name: "Harley Geiger"
+  role: "Board Member"
+  affiliation: ""
+  image: "/images/headshot-harley.png"
+
+- name: "Stacy O'Mara"
+  role: "Coordinator"
+  affiliation: "Security Research Legal Defense Fund"
+  image: "/images/headshot-stacy.png"

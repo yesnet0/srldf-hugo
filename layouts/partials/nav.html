@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="navbar-logo">
+      <img src="/images/srldf-logo.svg" alt="Security Research Legal Defense Fund" class="logo-image">
+    </a>
+
+    <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="navbar-menu">
+      <a href="{{ if .IsHome }}#what-we-do{{ else }}/#what-we-do{{ end }}" class="navbar-link">What We Do</a>
+      <a href="{{ if .IsHome }}#who-we-are{{ else }}/#who-we-are{{ end }}" class="navbar-link">Who We Are</a>
+      <a href="{{ if .IsHome }}#faq{{ else }}/#faq{{ end }}" class="navbar-link">FAQ</a>
+      <a href="{{ if .IsHome }}#donation-and-contact-info{{ else }}/#donation-and-contact-info{{ end }}" class="navbar-link">Donation and Contact Info</a>
+    </div>
+  </div>
+</nav>

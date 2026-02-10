@@ -1,0 +1,30 @@
+- question: "Is the Defense Fund operational?"
+  answer: "Yes. The Security Research Legal Defense Fund is operational as a 501(c)(3) public charity. Donations to the Defense Fund are tax deductible."
+
+- question: "Will the Defense Fund give direct legal representation to security researchers?"
+  answer: "No. Security researchers will use their own lawyer. The Defense Fund may provide grants so that security researchers are able to finance legal representation."
+
+- question: "Who will be eligible to receive assistance from the Defense Fund?"
+  answer: |
+    The eligibility criteria is subject to revision by the Board, and is anticipated to include:
+    <ul>
+      <li>The grantee demonstrates some financial need;</li>
+      <li>Funds donated from the Security Research Legal Defense Fund would go towards representation in legal matters related to good faith security research or vulnerability disclosure, and not such illegal behavior as extortion;</li>
+      <li>The "good faith security research or vulnerability disclosure" was performed for the purpose of good faith testing, investigation, correction, or disclosure of a security flaw or vulnerability, was carried out in a manner designed to avoid harm to individuals or the public, and the information derived from the activity was intended to be used primarily to promote the security or safety of computers or software, or those who use such computers or software; and</li>
+      <li>Board approval.</li>
+    </ul>
+
+- question: "How will the Defense Fund choose who is eligible to receive assistance?"
+  answer: "The Board will consider and choose who receives assistance, subject to the eligibility criteria adopted by the Board."
+
+- question: "Will the Defense Fund fix my hacked equipment or protect me from attackers?"
+  answer: "No. If you believe your computer or equipment has been maliciously attacked, we advise you to contact the equipment manufacturer, a security services provider, your FBI field office, or other law enforcement."
+
+- question: "Will the Defense Fund cover all my bills?"
+  answer: "The Defense Fund would provide a specific, not open-ended, grant. Whether this covers the entire bill depends on the situation."
+
+- question: "Will the Defense Fund choose my lawyer for me?"
+  answer: "No. If the security researcher does not have a lawyer, the Defense Fund may provide a referral."
+
+- question: "What if there is a conflict of interest?"
+  answer: "The Board of Directors has a policy for conflicts of interest, which may involve recusal when appropriate."

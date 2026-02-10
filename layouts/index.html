@@ -1,0 +1,132 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Security Research<br>Legal Defense Fund</h1>
+      <img src="/images/divider.svg" alt="" class="hero-divider" width="176">
+      <p class="hero-tagline">We aim to help fund legal representation for persons who face legal issues due to good faith security research and vulnerability disclosure in cases that would advance cybersecurity for the public interest.</p>
+    </div>
+  </div>
+</header>
+
+<!-- What We Do Section -->
+<section id="what-we-do" class="section section-process">
+  <div class="container">
+    <h2 class="section-heading">What We Do</h2>
+
+    <div class="tabs">
+      <div class="tabs-menu">
+        <button class="tab-btn active" data-tab="mission">Mission</button>
+        <button class="tab-btn" data-tab="background">Background</button>
+        <button class="tab-btn" data-tab="how-it-works">How it Works</button>
+        <button class="tab-btn" data-tab="resources">Resources</button>
+      </div>
+
+      <div class="tabs-content">
+        <!-- Mission Tab -->
+        <div class="tab-pane active" id="mission">
+          <p class="tab-text centered">The Security Research Legal Defense Fund ("the Defense Fund") is a 501(c)(3) nonprofit organization whose mission is to promote social welfare by providing financial assistance for legal representation of good faith security researchers and vulnerability disclosure.</p>
+        </div>
+
+        <!-- Background Tab -->
+        <div class="tab-pane" id="background">
+          <div class="two-column">
+            <div class="column">
+              <p class="tab-text"><span class="emphasis">Society depends on secure digital communications and devices, but cyberattacks and system failures increasingly endanger physical safety, consumer privacy, and the operation of critical services.</span></p>
+              <p class="tab-text">The public benefits when security vulnerabilities in software and systems are discovered and fixed before malicious actors can exploit them. In many instances, individuals have acted independently and in good faith to find and report vulnerabilities for mitigation, thereby strengthening the cybersecurity of products and services for the good of the community.</p>
+            </div>
+            <div class="column">
+              <p class="tab-text">While recognition from governments and businesses of the value of good faith security research and vulnerability disclosure is growing, individuals continue to meet with legal threats when their vulnerability research and disclosures are unwelcome or misunderstood. Such threats can ignore individuals' rights or misconstrue facts, creating a chilling effect on beneficial security research and vulnerability disclosure, especially for individuals without the resources to finance legal counsel.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How it Works Tab -->
+        <div class="tab-pane" id="how-it-works">
+          <div class="two-column">
+            <div class="column">
+              <p class="tab-text"><span class="emphasis">The Security Research Legal Defense Fund may donate to good faith security researchers' choice of counsel to represent them in defending against claims related to good faith security research and vulnerability disclosure. The Defense Fund does not provide direct legal representation at this time.</span></p>
+              <p class="tab-text">The organization's Board of Directors will consider potential grantees and vote on distribution of funds.</p>
+              <p class="tab-text">To help ensure funds are used in the public interest, the recipients of legal defense funds would be required to meet eligibility criteria. The eligibility criteria is subject to revision by the Board, and aims to reflect alignment with legally accepted definitions of "good faith security research."</p>
+            </div>
+            <div class="column">
+              <p class="tab-text"><strong class="emphasis">The eligibility criteria to apply for grants from the Defense Fund is anticipated to include:</strong></p>
+              <ul class="criteria-list">
+                <li>The grantee demonstrates financial need;</li>
+                <li>Funds donated from the Security Research Legal Defense Fund would go towards representation in legal matters related to good faith security research or vulnerability disclosure, and not such illegal behavior as extortion;</li>
+                <li>The "good faith security research or vulnerability disclosure" was performed for the purpose of good faith testing, investigation, correction, or disclosure of a security flaw or vulnerability, was carried out in a manner designed to avoid harm to individuals or the public, and the information derived from the activity was intended to be used primarily to promote the security or safety of computers or software, or those who use such computers or software; and</li>
+                <li>Board approval.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Tab -->
+        <div class="tab-pane" id="resources">
+          <p class="tab-text centered">Below are resources, documentation, and releases from the Security Research Legal Defense Fund.</p>
+          <ul class="resources-list">
+            {{ range site.Data.resources }}
+            <li><a href="{{ .url }}" target="_blank" class="resource-link">{{ .title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Are Section -->
+<section id="who-we-are" class="section section-team">
+  <div class="container">
+    <h2 class="section-heading centered">Who We Are</h2>
+
+    <div class="team-grid">
+      {{ range site.Data.board }}
+      <div class="team-card">
+        <img src="{{ .image }}" alt="{{ .name }}" class="team-image">
+        <div class="team-name">{{ .name }}</div>
+        <div class="team-role">{{ .role }}</div>
+        {{ if .affiliation }}
+        <p class="team-affiliation">{{ .affiliation }}</p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section section-faq">
+  <div class="container container-small">
+    <h2 class="section-heading centered">Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      {{ range site.Data.faq }}
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="faq-title">{{ .question }}</span>
+          <img src="/images/icon-plus.svg" alt="" class="faq-icon">
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            {{ .answer | safeHTML }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Donation and Contact Info -->
+    <div id="donation-and-contact-info" class="contact-section">
+      <h3 class="contact-heading">Donation and Contact Info</h3>
+      <p class="contact-text">
+        To donate to the Defense Fund, please email <a href="mailto:{{ site.Params.donateEmail }}" class="text-link">{{ site.Params.donateEmail }}</a>.
+      </p>
+      <p class="contact-text">
+        To contact us, please email <a href="mailto:{{ site.Params.contactEmail }}" class="text-link">{{ site.Params.contactEmail }}</a>.
+      </p>
+    </div>
+  </div>
+</section>
+{{ end }}

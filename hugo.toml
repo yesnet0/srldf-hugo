@@ -1,0 +1,16 @@
+baseURL = "https://securityresearchlegaldefensefund.org/"
+languageCode = "en-us"
+title = "Security Research Legal Defense Fund"
+
+[params]
+  description = "We aim to help fund legal representation for persons who face legal issues due to good faith security research and vulnerability disclosure in cases that would advance cybersecurity for the public interest."
+  donateEmail = "Donate@SecurityResearchLegalDefenseFund.org"
+  contactEmail = "info@SecurityResearchLegalDefenseFund.org"
+  securityEmail = "security@SecurityResearchLegalDefenseFund.org"
+  googleTagManagerID = "GTM-N62F2L2"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML"]
