@@ -38,6 +38,10 @@ body {
   overflow-wrap: break-word;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -170,8 +174,9 @@ img {
 }
 
 .hero-title {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--dark-slate-blue);
@@ -198,6 +203,7 @@ img {
 }
 
 .section-heading {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -364,6 +370,7 @@ img {
 }
 
 .team-name {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark-slate-blue);
@@ -436,6 +443,7 @@ img {
 }
 
 .faq-title {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--dark-slate-blue);
@@ -490,6 +498,7 @@ img {
 }
 
 .contact-heading {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -581,8 +590,9 @@ img {
 }
 
 .page-title {
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 2rem;
   color: var(--text-primary);
 }
