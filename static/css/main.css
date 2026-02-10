@@ -392,10 +392,11 @@ img {
 .section-faq {
   background-color: var(--white);
   background-image: url('../images/bg-graphic.svg');
-  background-position: bottom -100px left -200px;
+  background-position: bottom 50px left -50px;
   background-repeat: no-repeat;
-  background-size: 500px;
+  background-size: 400px;
   padding: 5rem 2rem;
+  padding-bottom: 8rem;
   position: relative;
 }
 
