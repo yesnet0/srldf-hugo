@@ -80,7 +80,8 @@ img {
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
