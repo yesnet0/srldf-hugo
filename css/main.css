@@ -392,9 +392,9 @@ img {
 .section-faq {
   background-color: var(--white);
   background-image: url('../images/bg-cubes.svg');
-  background-position: bottom 0 left -30px;
+  background-position: 0px 100%;
   background-repeat: no-repeat;
-  background-size: 250px auto;
+  background-size: 300px;
   padding: 5rem 2rem;
   padding-bottom: 6rem;
   position: relative;
