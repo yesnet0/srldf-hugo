@@ -391,12 +391,12 @@ img {
    ============================================ */
 .section-faq {
   background-color: var(--white);
-  background-image: url('../images/bg-graphic.svg');
-  background-position: bottom 50px left -50px;
+  background-image: url('../images/bg-cubes.svg');
+  background-position: bottom 0 left -30px;
   background-repeat: no-repeat;
-  background-size: 400px;
+  background-size: 250px auto;
   padding: 5rem 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
   position: relative;
 }
 
@@ -408,7 +408,7 @@ img {
 }
 
 .faq-item {
-  border: 1px solid #d1d5db;
+  border: 1px solid #e8c4b8;
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.2s ease;
