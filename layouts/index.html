@@ -4,7 +4,7 @@
   <div class="hero-container">
     <div class="hero-content">
       <h1 class="hero-title">Security Research<br>Legal Defense Fund</h1>
-      <img src="/images/divider.svg" alt="" class="hero-divider" width="176">
+      <img src="{{ "images/divider.svg" | relURL }}" alt="" class="hero-divider" width="176">
       <p class="hero-tagline">We aim to help fund legal representation for persons who face legal issues due to good faith security research and vulnerability disclosure in cases that would advance cybersecurity for the public interest.</p>
     </div>
   </div>
@@ -67,7 +67,7 @@
           <p class="tab-text centered">Below are resources, documentation, and releases from the Security Research Legal Defense Fund.</p>
           <ul class="resources-list">
             {{ range site.Data.resources }}
-            <li><a href="{{ .url }}" target="_blank" class="resource-link">{{ .title }}</a></li>
+            <li><a href="{{ .url | relURL }}" target="_blank" class="resource-link">{{ .title }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -84,7 +84,7 @@
     <div class="team-grid">
       {{ range site.Data.board }}
       <div class="team-card">
-        <img src="{{ .image }}" alt="{{ .name }}" class="team-image">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" class="team-image">
         <div class="team-name">{{ .name }}</div>
         <div class="team-role">{{ .role }}</div>
         {{ if .affiliation }}
@@ -106,7 +106,7 @@
       <div class="faq-item">
         <button class="faq-question">
           <span class="faq-title">{{ .question }}</span>
-          <img src="/images/icon-plus.svg" alt="" class="faq-icon">
+          <img src="{{ "images/icon-plus.svg" | relURL }}" alt="" class="faq-icon">
         </button>
         <div class="faq-answer">
           <div class="faq-answer-content">

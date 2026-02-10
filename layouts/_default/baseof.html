@@ -17,8 +17,8 @@
   <meta name="twitter:description" content="{{ site.Params.description }}">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
   <!-- Google Fonts - Nunito -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 
   <!-- Font smoothing -->
   <style>
@@ -60,6 +60,6 @@
 
   {{ partial "footer.html" . }}
 
-  <script src="/js/main.js"></script>
+  <script src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>
