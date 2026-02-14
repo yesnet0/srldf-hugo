@@ -1,3 +1,3 @@
-Contact: mailto:security@SecurityResearchLegalDefenseFund.org
+Contact: mailto:security@srldf.org
 Preferred-Languages: en
-Canonical: https://securityresearchlegaldefensefund.org/.well-known/security.txt
+Canonical: https://srldf.org/.well-known/security.txt

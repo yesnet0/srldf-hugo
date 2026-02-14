@@ -54,7 +54,7 @@ The SRLDF understands that storing our data in a secure manner is required. The 
 
 You may review and request changes to your PII that the SRLDF has collected, including the removal of your PII from the SRLDF's databases in order to prevent receipt of future communications or to halt receipt of our Website services, using any of the following options:
 
-You can send your request via e-mail to: info@securityresearchlegaldefensefund.org, or mail your request to the following postal address:
+You can send your request via e-mail to: info@srldf.org, or mail your request to the following postal address:
 
 *Security Research Legal Defense Fund, 600 Massachusetts Ave NW, 8th Floor, Washington, DC 20001*
 
@@ -66,4 +66,4 @@ This Privacy Policy may be revised from time to time as we add new features and 
 
 ### Questions?
 
-If you have any questions about this Privacy Policy or about the SRLDF's handling of your information, please contact info@securityresearchlegaldefensefund.org.
+If you have any questions about this Privacy Policy or about the SRLDF's handling of your information, please contact info@srldf.org.

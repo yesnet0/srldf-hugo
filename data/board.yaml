@@ -13,7 +13,12 @@
   affiliation: ""
   image: "images/headshot-harley.png"
 
-- name: "Stacy O'Mara"
-  role: "Coordinator"
-  affiliation: "Security Research Legal Defense Fund"
-  image: "images/headshot-stacy.png"
+- name: "Jen Ellis"
+  role: "Board Member"
+  affiliation: "NextJenSecurity"
+  image: "images/headshot-jen.png"
+
+- name: "Casey Ellis"
+  role: "Board Member"
+  affiliation: "Tall Poppy Group/disclose.io"
+  image: "images/headshot-casey.png"
