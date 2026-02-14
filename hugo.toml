@@ -4,7 +4,7 @@ title = "Security Research Legal Defense Fund"
 
 [params]
   description = "We aim to help fund legal representation for persons who face legal issues due to good faith security research and vulnerability disclosure in cases that would advance cybersecurity for the public interest."
-  donateEmail = "Donate@srldf.org"
+  donateEmail = "donate@srldf.org"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
   googleTagManagerID = "GTM-N62F2L2"

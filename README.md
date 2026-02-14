@@ -98,7 +98,7 @@ Edit `hugo.toml`:
 
 ```toml
 [params]
-  donateEmail = "Donate@srldf.org"
+  donateEmail = "donate@srldf.org"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
 ```
