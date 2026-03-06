@@ -20,6 +20,7 @@
         <button class="tab-btn active" data-tab="mission">Mission</button>
         <button class="tab-btn" data-tab="background">Background</button>
         <button class="tab-btn" data-tab="how-it-works">How it Works</button>
+        <button class="tab-btn" data-tab="news">News</button>
         <button class="tab-btn" data-tab="resources">Resources</button>
       </div>
 
@@ -62,11 +63,21 @@
           </div>
         </div>
 
+        <!-- News Tab -->
+        <div class="tab-pane" id="news">
+          <p class="tab-text centered">News and announcements from the Security Research Legal Defense Fund.</p>
+          <ul class="resources-list">
+            {{ range where site.Data.resources "type" "news" }}
+            <li><a href="{{ .url | relURL }}" target="_blank" class="resource-link">{{ .title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
         <!-- Resources Tab -->
         <div class="tab-pane" id="resources">
           <p class="tab-text centered">Below are resources, documentation, and releases from the Security Research Legal Defense Fund.</p>
           <ul class="resources-list">
-            {{ range site.Data.resources }}
+            {{ range where site.Data.resources "type" "resource" }}
             <li><a href="{{ .url | relURL }}" target="_blank" class="resource-link">{{ .title }}</a></li>
             {{ end }}
           </ul>
@@ -76,8 +87,19 @@
   </div>
 </section>
 
+<!-- Grant Request Section -->
+<section id="grant" class="section section-grant">
+  <div class="container container-small">
+    <h2 class="section-heading centered">Request a Grant</h2>
+    <p class="tab-text centered">Are you or someone you know a good faith security researcher facing legal action? We provide grants to support legal representation — reach out to learn more.</p>
+    <div class="grant-cta">
+      <a href="mailto:grants@srldf.org?subject=Grant%20Request" class="btn-grant">Submit a Grant Request</a>
+    </div>
+  </div>
+</section>
+
 <!-- Who We Are Section -->
-<section id="who-we-are" class="section section-team">
+<section id="board" class="section section-team">
   <div class="container">
     <h2 class="section-heading centered">Who We Are</h2>
 
@@ -127,6 +149,10 @@
       <p class="contact-text">
         To contact us, please email<br>
         <a href="mailto:{{ site.Params.contactEmail }}" class="text-link">{{ site.Params.contactEmail }}</a>.
+      </p>
+      <p class="contact-text">
+        To request a grant, please email<br>
+        <a href="mailto:grants@srldf.org" class="text-link">grants@srldf.org</a>.
       </p>
     </div>
   </div>
