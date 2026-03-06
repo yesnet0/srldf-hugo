@@ -340,6 +340,34 @@ img {
 }
 
 /* ============================================
+   Grant Section
+   ============================================ */
+.section-grant {
+  background-color: var(--light-grey);
+}
+
+.grant-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-grant {
+  display: inline-block;
+  background-color: var(--tomato);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-grant:hover {
+  background-color: var(--accent);
+}
+
+/* ============================================
    Team Section
    ============================================ */
 .section-team {
