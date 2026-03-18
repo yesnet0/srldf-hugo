@@ -654,7 +654,7 @@ img {
   text-decoration: underline;
 }
 
-.page-body em {
+.page-body p:last-of-type em {
   display: block;
   margin-top: 1rem;
 }
