@@ -39,4 +39,4 @@ With an expanded board, the SRLDF is focused on four priorities:
 ## About the Security Research Legal Defense Fund
 
 The SRLDF is a 501(c)(3) nonprofit dedicated to providing legal defense grants, counsel access, and advocacy for security researchers who face legal or regulatory action as a result of good-faith security research and disclosure. The Fund operates to preserve a safe, sustainable environment for security research globally.
-Learn more or support the Fund at [securityresearchlegaldefensefund.org](https://www.securityresearchlegaldefensefund.org/).
+Learn more or support the Fund at [srldf.org](https://srldf.org/).
