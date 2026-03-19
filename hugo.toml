@@ -8,6 +8,7 @@ title = "Security Research Legal Defense Fund"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
   googleTagManagerID = "GTM-N62F2L2"
+  ogImage = "images/srldf-og.png"
 
 [markup.goldmark.renderer]
   unsafe = true
