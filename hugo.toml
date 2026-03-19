@@ -10,6 +10,9 @@ title = "Security Research Legal Defense Fund"
   googleTagManagerID = "GTM-N62F2L2"
   googleAnalyticsID = "G-RTTFRMLYPH"
   ogImage = "images/srldf-org.png"
+  blueskyURL = "https://bsky.app/profile/srldf.bsky.social"
+  linkedinURL = "https://www.linkedin.com/company/security-research-legal-defense-fund"
+  twitterURL = "https://x.com/securityldf"
 
 [markup.goldmark.renderer]
   unsafe = true
