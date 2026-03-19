@@ -573,6 +573,21 @@ img {
   width: auto;
 }
 
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-social-link {
+  color: var(--dark-slate-blue);
+  transition: color 0.2s;
+}
+
+.footer-social-link:hover {
+  color: var(--tomato);
+}
+
 .footer-divider {
   height: 1px;
   background-color: #e5e5e5;
