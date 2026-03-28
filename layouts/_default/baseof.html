@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>{{ .Title | default site.Title }}</title>
-  <meta name="description" content="{{ site.Params.description }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title | default site.Title }}">
-  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
   <meta property="og:url" content="{{ .Permalink }}">
@@ -17,7 +18,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ .Title | default site.Title }}">
-  <meta name="twitter:description" content="{{ site.Params.description }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="twitter:image" content="{{ site.Params.ogImage | absURL }}">
 
   <!-- Favicon -->
@@ -59,6 +60,18 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','{{ site.Params.googleTagManagerID }}');</script>
   {{ end }}
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Security Research Legal Defense Fund",
+    "alternateName": "SRLDF",
+    "url": "https://srldf.org",
+    "description": "Legal support for security researchers facing threats for good-faith vulnerability disclosure."
+  }
+  </script>
 </head>
 <body>
   {{ if site.Params.googleTagManagerID }}

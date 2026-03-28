@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Security Research Legal Defense Fund"
 
 [params]
-  description = "We aim to help fund legal representation for persons who face legal issues due to good faith security research and vulnerability disclosure in cases that would advance cybersecurity for the public interest."
+  description = "The Security Research Legal Defense Fund provides legal support and resources for security researchers facing legal threats for good-faith vulnerability disclosure."
   donateEmail = "donate@srldf.org"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
