@@ -1,6 +1,7 @@
 ---
 title: "Security Research Legal Defense Fund Appoints Casey John Ellis and Jen Ellis to Board"
 date: 2026-03-18
+description: "SRLDF appoints Casey John Ellis (Bugcrowd, disclose.io) and Jen Ellis (NextJenSecurity) to its board, expanding global reach and policy advocacy for security researchers."
 ---
 
 *Fund expands leadership as it enters next phase of growth*

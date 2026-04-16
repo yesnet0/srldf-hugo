@@ -1,5 +1,6 @@
 ---
 title: "Privacy Policy"
+description: "How the Security Research Legal Defense Fund collects, uses, and protects personal information on srldf.org."
 ---
 
 The Security Research Legal Defense Fund (SRLDF) is committed to maintaining the security and privacy of your personal information collected through this website, https://securityresearchlegaldefensefund.org. This Privacy Policy discloses the SRLDF's information collection and dissemination practices in connection with the Website and applies solely to the information that we collect through the Website.

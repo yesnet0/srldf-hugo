@@ -7,9 +7,10 @@ title = "Security Research Legal Defense Fund"
   donateEmail = "donate@srldf.org"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
-  googleTagManagerID = "GTM-N62F2L2"
-  googleAnalyticsID = "G-RTTFRMLYPH"
+  fathomSiteID = "SYMDDKWU"
   ogImage = "images/srldf-org.png"
+  logo = "brand/srldf-shield-square.png"
+  foundingDate = "2023"
   blueskyURL = "https://bsky.app/profile/srldf.bsky.social"
   linkedinURL = "https://www.linkedin.com/company/security-research-legal-defense-fund"
   twitterURL = "https://x.com/securityldf"
@@ -18,4 +19,8 @@ title = "Security Research Legal Defense Fund"
   unsafe = true
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[minify]
+  minifyOutput = true

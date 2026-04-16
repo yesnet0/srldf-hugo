@@ -5,15 +5,20 @@
   <title>{{ .Title | default site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F25300">
   <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title | default site.Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ if or .IsHome (eq .Kind "page") }}{{ if eq .Section "news" }}article{{ else }}website{{ end }}{{ else }}website{{ end }}">
   <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ site.Title }}">
+  {{ if eq .Section "news" }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:publisher" content="{{ site.BaseURL }}">
+  {{ end }}
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -25,10 +30,20 @@
   <link rel="shortcut icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
+  <!-- RSS -->
+  {{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+  {{ end -}}
+
   <!-- Google Fonts - Nunito & Lexend Deca -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Preload hero assets (homepage only) -->
+  {{ if .IsHome }}
+  <link rel="preload" as="image" href="{{ "images/srldf-logo.svg" | relURL }}">
+  {{ end }}
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
@@ -41,45 +56,55 @@
     }
   </style>
 
-  <!-- Google Analytics (GA4) -->
-  {{ if site.Params.googleAnalyticsID }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalyticsID }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.Params.googleAnalyticsID }}');
-  </script>
-  {{ end }}
-
-  <!-- Google Tag Manager -->
-  {{ if site.Params.googleTagManagerID }}
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{ site.Params.googleTagManagerID }}');</script>
-  {{ end }}
-
   <!-- Organization JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "NGO",
     "name": "Security Research Legal Defense Fund",
     "alternateName": "SRLDF",
-    "url": "https://srldf.org",
-    "description": "Legal support for security researchers facing threats for good-faith vulnerability disclosure."
+    "url": "{{ site.BaseURL }}",
+    "logo": "{{ site.Params.logo | absURL }}",
+    "image": "{{ site.Params.ogImage | absURL }}",
+    "email": "{{ site.Params.contactEmail }}",
+    "foundingDate": "{{ site.Params.foundingDate }}",
+    "nonprofitStatus": "Nonprofit501c3",
+    "description": "{{ site.Params.description }}",
+    "sameAs": [
+      {{- $links := slice -}}
+      {{- with site.Params.twitterURL }}{{ $links = $links | append . }}{{ end -}}
+      {{- with site.Params.linkedinURL }}{{ $links = $links | append . }}{{ end -}}
+      {{- with site.Params.blueskyURL }}{{ $links = $links | append . }}{{ end -}}
+      {{- range $i, $url := $links }}{{ if $i }},{{ end }}"{{ $url }}"{{ end }}
+    ]
   }
   </script>
-</head>
-<body>
-  {{ if site.Params.googleTagManagerID }}
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.Params.googleTagManagerID }}"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  {{ if .IsHome }}
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{ range $i, $faq := site.Data.faq -}}
+      {{ if $i }},{{ end }}{
+        "@type": "Question",
+        "name": {{ $faq.question | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ $faq.answer | jsonify }}
+        }
+      }
+      {{- end }}
+    ]
+  }
+  </script>
   {{ end }}
 
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
   {{ partial "nav.html" . }}
 
   <main class="main-wrapper">
@@ -91,6 +116,8 @@
   <script src="{{ "js/main.js" | relURL }}"></script>
 
   <!-- Fathom Analytics -->
-  <script src="https://cdn.usefathom.com/script.js" data-site="SYMDDKWU" defer></script>
+  {{ with site.Params.fathomSiteID }}
+  <script src="https://cdn.usefathom.com/script.js" data-site="{{ . }}" defer></script>
+  {{ end }}
 </body>
 </html>

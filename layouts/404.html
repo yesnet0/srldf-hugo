@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="section section-404">
+  <div class="container container-small" style="text-align:center; padding: 80px 20px;">
+    <h1 class="page-title">Page not found</h1>
+    <p class="tab-text" style="margin: 24px 0 32px;">The page you're looking for has moved or doesn't exist.</p>
+    <p class="tab-text">
+      <a href="{{ "/" | relURL }}" class="text-link">Return to the homepage</a> &middot;
+      <a href="{{ "/#grant" | relURL }}" class="text-link">Request a grant</a> &middot;
+      <a href="mailto:{{ site.Params.contactEmail }}" class="text-link">Contact us</a>
+    </p>
+  </div>
+</section>
+{{ end }}

@@ -106,7 +106,7 @@
     <div class="team-grid">
       {{ range site.Data.board }}
       <div class="team-card">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}" class="team-image">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" class="team-image" loading="lazy" width="200" height="200">
         <div class="team-name">{{ .name }}</div>
         <div class="team-role">{{ .role }}</div>
         {{ if .affiliation }}
