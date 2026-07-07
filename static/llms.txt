@@ -1,0 +1,39 @@
+# Security Research Legal Defense Fund
+
+> The Security Research Legal Defense Fund (SRLDF) is a 501(c)(3) nonprofit, established in 2023, that provides financial assistance for the legal representation of good-faith security researchers who face legal issues due to good-faith security research and vulnerability disclosure, in cases that advance cybersecurity for the public interest.
+
+The Fund promotes social welfare by helping good-faith security researchers defend against legal claims related to their research and vulnerability disclosure. The Fund may donate toward a researcher's own choice of counsel; it does not provide direct legal representation at this time. The Board of Directors considers potential grantees and votes on the distribution of funds.
+
+## About
+- [Home](https://srldf.org/): Overview of the Fund, its mission, and how it operates.
+- [News](https://srldf.org/news/): Announcements and updates from the Fund.
+- [Privacy policy](https://srldf.org/privacy-policy/): How the Fund handles personal information.
+
+## For security researchers (grants & eligibility)
+- [How it works / request a grant](https://srldf.org/#how-it-works): How to seek assistance and how grant decisions are made.
+
+The Fund may donate to a good-faith security researcher's own choice of counsel to defend against claims related to good-faith security research or vulnerability disclosure. Anticipated eligibility criteria (subject to revision by the Board):
+- Demonstrated financial need.
+- Funds go toward representation in legal matters related to good-faith security research or vulnerability disclosure - not illegal behavior such as extortion.
+- The activity was good-faith testing, investigation, correction, or disclosure of a security flaw, carried out to avoid harm to individuals or the public, with information intended primarily to promote security.
+- Board approval.
+
+## Board of Directors
+- Jim Dempsey (UC Berkeley and Stanford)
+- Kurt Opsahl (Filecoin Foundation)
+- Harley Geiger
+- Jen Ellis (NextJenSecurity)
+- Casey Ellis (Tall Poppy Group and disclose.io)
+
+## Contact
+- [General / contact](mailto:info@srldf.org): General inquiries and contact.
+- [Donations](mailto:donate@srldf.org): Donation inquiries.
+- [Security](mailto:security@srldf.org): Security contact for the Fund.
+
+## Follow
+- [X / Twitter](https://x.com/securityldf): News and updates on X.
+- [LinkedIn](https://www.linkedin.com/company/security-research-legal-defense-fund): Company page on LinkedIn.
+- [Bluesky](https://bsky.app/profile/srldf.bsky.social): Updates on Bluesky.
+
+## Optional
+- [Security policy (security.txt)](https://srldf.org/.well-known/security.txt): Security contact and disclosure policy for the Fund's website.

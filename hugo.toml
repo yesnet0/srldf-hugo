@@ -2,15 +2,20 @@ baseURL = "https://srldf.org/"
 languageCode = "en-us"
 title = "Security Research Legal Defense Fund"
 
+# No taxonomies on this site — suppress thin, empty categories/tags pages
+disableKinds = ["taxonomy", "term"]
+
 [params]
-  description = "The Security Research Legal Defense Fund provides legal support and resources for security researchers facing legal threats for good-faith vulnerability disclosure."
+  description = "A 501(c)(3) nonprofit that helps fund legal representation for security researchers facing legal threats over good-faith vulnerability disclosure."
   donateEmail = "donate@srldf.org"
   contactEmail = "info@srldf.org"
   securityEmail = "security@srldf.org"
-  fathomSiteID = "SYMDDKWU"
-  ogImage = "images/srldf-org.png"
+  googleTagManagerID = "GTM-N62F2L2"
+  googleAnalyticsID = "G-RTTFRMLYPH"
+  ogImage = "images/srldf-og.png"
   logo = "brand/srldf-shield-square.png"
   foundingDate = "2023"
+  twitterHandle = "securityldf"
   blueskyURL = "https://bsky.app/profile/srldf.bsky.social"
   linkedinURL = "https://www.linkedin.com/company/security-research-legal-defense-fund"
   twitterURL = "https://x.com/securityldf"
