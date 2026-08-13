@@ -421,6 +421,23 @@ img {
   margin-top: 0.25rem;
 }
 
+.footnote-marker {
+  color: var(--tomato);
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.team-footnote {
+  font-size: 0.85rem;
+  color: #666;
+  max-width: 720px;
+  margin: 3rem auto 0;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
 /* ============================================
    FAQ Section
    ============================================ */
