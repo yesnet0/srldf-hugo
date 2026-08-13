@@ -5,8 +5,9 @@
 
 - name: "Kurt Opsahl"
   role: "Board Member"
-  affiliation: "Filecoin Foundation"
+  affiliation: "Ridder, Costa & Johnstone LLP"
   image: "images/headshot-kurt.jpg"
+  disclaimer: "As an attorney at RCJ, Kurt’s practice includes counseling and representing security researchers. Accordingly, Kurt will recuse himself from any SRLDF decision where he has a direct or indirect interest that could influence the decision, including any that involve a client or prospective client."
 
 - name: "Harley Geiger"
   role: "Board Member"

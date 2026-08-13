@@ -110,11 +110,17 @@
         <div class="team-name">{{ .name }}</div>
         <div class="team-role">{{ .role }}</div>
         {{ if .affiliation }}
-        <p class="team-affiliation">{{ .affiliation }}</p>
+        <p class="team-affiliation">{{ .affiliation }}{{ if .disclaimer }}<span class="footnote-marker">*</span>{{ end }}</p>
         {{ end }}
       </div>
       {{ end }}
     </div>
+
+    {{ range site.Data.board }}
+    {{ if .disclaimer }}
+    <p class="team-footnote"><span class="footnote-marker">*</span> {{ .disclaimer }}</p>
+    {{ end }}
+    {{ end }}
   </div>
 </section>
 
